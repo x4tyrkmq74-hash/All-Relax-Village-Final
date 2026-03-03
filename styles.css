@@ -1,0 +1,279 @@
+/* =========================
+   SITE STYLES (FINAL PROJECT)
+   Fixed-width: 1280px
+   ========================= */
+
+:root{
+  --ink: #0f1b2b;
+  --slate: #2a3b52;
+  --sky: #e8f1fb;
+  --snow: #ffffff;
+  --mist: #f4f6f8;
+  --accent: #1f6feb;
+
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(15, 27, 43, 0.10);
+
+  --fonts: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: var(--fonts);
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--sky), var(--mist));
+  line-height: 1.6;
+}
+
+.site{
+  width: 1280px;
+  margin: 0 auto;
+  background: var(--snow);
+  box-shadow: var(--shadow);
+}
+
+.site-header{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 2.5rem 1rem;
+}
+
+.site-title{
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 800;
+}
+
+.site-title a{
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-title a:focus{
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.site-nav ul{
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a{
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-weight: 700;
+}
+
+.site-nav a:hover{
+  color: var(--accent);
+}
+
+.site-nav a:focus{
+  outline: 3px solid var(--accent);
+  outline-offset: 6px;
+}
+
+.site-nav a.current{
+  color: var(--accent);
+}
+
+.hero img{
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+main{
+  padding: 3rem 2.5rem 3.5rem;
+}
+
+.intro{
+  text-align: center;
+  margin: 0 auto 3rem;
+  max-width: 76ch;
+}
+
+.intro h2{
+  font-size: 2.1rem;
+  margin: 0 0 1rem;
+  font-weight: 800;
+}
+
+.intro p{
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.required-note{
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.required{
+  color: #b00020;
+  font-weight: 800;
+}
+
+.features{
+  display: grid;
+  gap: 2.5rem;
+}
+
+.feature{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.feature img{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.feature-text h3{
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem;
+  font-weight: 800;
+}
+
+.feature-text p{
+  margin: 0;
+  font-size: 1.05rem;
+  max-width: 60ch;
+}
+
+/* Contact Layout 1 */
+.contact-layout{
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.contact-image{
+  width: 70%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.contact-form{
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.form-field{
+  margin-bottom: 1.25rem;
+}
+
+label,
+legend{
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+input,
+textarea{
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 2px solid rgba(42, 59, 82, 0.20);
+  border-radius: 10px;
+  background: var(--snow);
+}
+
+textarea{
+  resize: vertical;
+  min-height: 160px;
+}
+
+input:focus,
+textarea:focus{
+  outline: 3px solid rgba(31, 111, 235, 0.35);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+input:invalid,
+textarea:invalid{
+  border-color: #b00020;
+}
+
+fieldset{
+  border: 2px solid rgba(42, 59, 82, 0.20);
+  border-radius: 10px;
+  padding: 0.9rem 1rem 0.6rem;
+}
+
+.radio-row{
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+}
+
+.radio-row input{
+  width: auto;
+  margin: 0;
+}
+
+.form-actions{
+  margin-top: 0.5rem;
+}
+
+button{
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.85rem 1.2rem;
+  border: 0;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--snow);
+  cursor: pointer;
+}
+
+button:hover{
+  filter: brightness(0.92);
+}
+
+button:focus{
+  outline: 3px solid rgba(31, 111, 235, 0.45);
+  outline-offset: 3px;
+}
+
+.site-footer{
+  background: #e6e6e6;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.site-footer p{
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
